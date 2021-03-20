@@ -59,10 +59,11 @@ $(function() {
         // 提交前先阻止默认提交行为
         e.preventDefault();
         let data = {
-                username: $('#form-reg [name=username]').val(),
-                password: $('#form-reg [name=password]').val()
-            }
-            // 发起 Ajax 的 post 请求,
+            username: $('#form-reg [name=username]').val(),
+            password: $('#form-reg [name=password]').val()
+        }
+
+        // 发起 Ajax 的 post 请求,
         $.post('/api/reguser', data, function(res) {
             // 注册失败
             if (res.status !== 0) {
